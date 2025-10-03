@@ -1,0 +1,76 @@
+<html>
+<head>
+     <meta name="viewport"        content="width=device-width,           initial-scale=1.0">
+<style>
+          body
+              { background-color:#c7ffcd;
+                  margin:20%;
+                  
+   }
+</style>
+
+<title>Op</title>
+</head>
+<body>
+<script>
+var a = [ " 0 "," 1 "," A "," B "];
+var b=0;
+var v=0;
+var s=3;
+var L = a.length;
+var Ls = L*L;
+for ( var i=0; i<Ls; i++)
+ {
+   for(var j = 0; j<L;j++)
+      {   
+      if(j<s){
+        document.write(a[0]);
+          if(v==4)
+            {
+                v=0;
+                s-=1;
+                if(s==1)
+                  {
+                    s=3;
+                    }
+              }
+        }
+    else if(j==s)
+         {
+         document.write(a[b+v]);
+           v+=1;
+           
+           if(v==4)
+            {
+                v=0;
+                s-=1;
+                if(s<=-1)
+                  {
+                    s=3;
+                    }
+              }
+         } 
+  
+ else{
+   
+   document.write(a[0]);
+    if(v==4)
+            {
+                v=1;
+                s-=1;
+                if(s<=-1)
+                  {
+                    s=3;
+                    }
+              }  
+        }
+    }
+document.write("<br>");
+    
+}
+document.write("L : ",L,"<br>","Ls : ",Ls);
+
+
+</script>
+</body>
+</html>
